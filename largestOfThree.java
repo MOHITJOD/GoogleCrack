@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class largestOfThree {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int a = scanner.nextInt();
+        System.out.println("Enter the second number: ");
+        int b = scanner.nextInt();
+        System.out.println("Enter the third number: ");
+        int c = scanner.nextInt();
+        
+        int largest = findLargest(a, b, c);
+        System.out.println("The largest number is: " + largest);
+        scanner.close();
+    }
+    public static int findLargest (int a, int b, int c) {
+        if (a > b && a > c) {
+            return a;
+        } else if (b > a && b > c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+}
